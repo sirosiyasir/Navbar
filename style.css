@@ -7,10 +7,49 @@ a {
   color: aliceblue;
 }
 
+hr {
+  margin-block: 10px;
+  border-color: #fff;
+}
+
 /* CLASS */
+.mobile-navbar {
+  display: none;
+  /* background-color: rgb(71, 98, 121); */
+  background-color: rgb(12, 11, 11);
+  position: absolute;
+  z-index: 100;
+  height: 11rem;
+  width: 100%;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  /* opacity: 0.9; */
+  text-align: center;
+}
+
+.mobile-navbar .mobile-links {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobile-navbar .mobile-links a {
+  font-size: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-shadow: 0 0 8px #fff;
+}
+
+.mobile-navbar .mobile-links a:nth-of-type(1) {
+  margin-top: 10px;
+}
+
 .navigation {
   margin-top: 1.5rem;
-  background-color: rgb(163, 212, 212);
+  background-color: #000;
   border-radius: 1.5rem;
 }
 
@@ -23,6 +62,13 @@ a {
   display: inline-block;
   padding-top: 0.3rem;
   margin-left: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#first-img {
+  display: inline-block;
+  margin-right: 10rem;
 }
 
 #links {
@@ -42,6 +88,7 @@ a {
   right: 2rem;
   color: aliceblue;
   display: none;
+  z-index: 100;
 }
 
 #menu p:active {
@@ -67,12 +114,58 @@ a {
   display: none;
 }
 
+#second-img {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1399px) {
+  .calculator-container h1 #calculator-title-span {
+    font-size: 4.7rem;
+    right: -0.2rem;
+    top: 10rem;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .calculator-container h1 #calculator-title-span {
+    font-size: 3.5rem;
+    right: -0.2rem;
+    top: 14rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
+  #first-img,
+  #second-img {
+    display: block;
+    margin-right: 0;
+  }
   #links {
     position: absolute;
     top: -2.3rem;
     right: 2rem;
   }
+  .calculator {
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .calculator-container h1 #calculator-title-span {
+    position: static;
+    font-size: 3rem;
+  }
+
+  .calculator-container h1 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  /* .top {
+    height: 110vh;
+  } */
 }
 
 @media screen and (max-width: 767px) {
@@ -82,11 +175,33 @@ a {
 
   #menu {
     display: block;
-    top: -1.8rem;
   }
-  .navigation {
-    margin-top: 0;
-    border-radius: 0;
+
+  /* .dp-block-m-a {
+    display: none;
+  } */
+
+  .easy-png {
+    margin-right: 40px;
+  }
+
+  .middle {
+    display: block;
+    text-align: center;
+  }
+
+  .middle h4 {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #menu {
+    top: -2rem;
+  }
+
+  #menu-links {
+    display: none;
   }
 
   #menu p {
@@ -94,5 +209,19 @@ a {
   }
   #menu .menu-icon {
     display: block;
+  }
+
+  .middle {
+    display: block;
+    text-align: center;
+  }
+
+  .middle h4 {
+    margin-bottom: 50px;
+  }
+
+  .navigation {
+    margin-top: 0;
+    border-radius: 0;
   }
 }
